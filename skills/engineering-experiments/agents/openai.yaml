@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Experiments"
+  short_description: "Design, run, and review bounded engineering experiments"
+  default_prompt: "Use $engineering-experiments to design, validate, execute, or review an engineering experiment using the eight-step framework, starting at the stage I request."
