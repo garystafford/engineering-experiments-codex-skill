@@ -4,6 +4,8 @@ A Codex skill for designing, running, and reviewing controlled engineering exper
 
 Use it to compare implementations, evaluate performance or cost changes, investigate agent behavior, or review existing experimental results. It emphasizes credible baselines, predefined criteria, resource limits, retained evidence, and conclusions bounded by what was tested.
 
+For more details on the framework, read [From Hypothesis to Understanding: A Practical Framework for Engineering Experiments](https://blog.latentthoughts.com/from-hypothesis-to-understanding-a-practical-framework-for-engineering-experiments).
+
 ## Install
 
 In Codex, ask the built-in skill installer:
