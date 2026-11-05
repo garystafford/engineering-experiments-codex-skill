@@ -13,7 +13,7 @@ Use the eight steps below to connect a testable hypothesis to an engineering dec
 - **Execute:** steps 4–5 under an agreed protocol. Adapt the [results summary](assets/results-summary.md).
 - **Review:** steps 6–8 using existing results. Adapt the results summary and [decision record](assets/decision-record.md); do not require another run merely to complete a review.
 
-Read only the resources needed for the task. The [worked example](references/worked-example.md) illustrates the framework; its settings and sample results are not defaults or evidence for another investigation.
+Read only the resources needed for the task. The [worked example](references/worked-example.md) illustrates the framework; its settings and sample results are not defaults or evidence for another investigation. For a measured mixed result that separates a targeted mechanism from overall performance, read [the controller-efficiency example](references/mixed-result-example.md).
 
 Inspect existing requirements, protocols, results, and authorization before asking questions. Distinguish requirements, constraints, proposed choices, and assumptions. Ask about unresolved choices that materially affect cost, validity, or scope; continue independent work when possible. A request to design or review an experiment does not authorize executing it. Reuse spending authorization already granted rather than introducing repeated approval gates.
 
@@ -27,17 +27,17 @@ Define requirements, the intervention, comparison condition, controls, architect
 
 ## 3. Specify the protocol
 
-Define metrics, acceptance criteria, cases, repetitions, evaluation order, state isolation, resource limits, and stopping rules. Separate development from evaluation where applicable. Explain why the protocol can answer the question and what uncertainty it will leave. A useful effect, a continuation target, and statistical support are different judgments.
+Define metrics, acceptance criteria, cases, repetitions, evaluation order, state isolation, resource limits, and stopping rules. Separate development from evaluation where applicable. Explain why the protocol can answer the question and what uncertainty it will leave. A useful effect, a continuation target, and statistical support are different judgments. Define start and stop events for timing measures and the treatment of warm-up. Separate setup, task execution, grading, evidence collection, and cleanup when those boundaries affect the decision. Define counting units: for agent experiments, model generations, business-tool invocations, approval calls, and controller API requests are distinct measures; hosted generation spans need not equal physical model requests.
 
 Estimate the costs of development and evaluation, including candidate generation when relevant. Obtain authorization for any spending not already covered. Specify budget enforcement, incomplete-run accounting, and failure/retry rules. Do not import thresholds, candidate counts, or budgets from an example.
 
 ## 4. Validate the experimental setup
 
-Validate tools, graders, test data, task feasibility, and starting conditions before interpreting experimental outcomes. Use component and integration tests as appropriate, including known correct and incorrect outcomes. Check actual effects and relevant action traces when final answers alone are insufficient. Record completed checks and remaining limitations separately from planned checks. Reference solutions establish feasibility, not optimality.
+Validate tools, graders, test data, task feasibility, and starting conditions before interpreting experimental outcomes. Use component and integration tests as appropriate, including known correct and incorrect outcomes. Check actual effects and relevant action traces when final answers alone are insufficient. Record completed checks and remaining limitations separately from planned checks. Reference solutions establish feasibility, not optimality. Validate the harness as a measurement instrument: completion and failure detection, timing boundaries, delayed or missing records, and recovery without repeating completed actions where relevant. Classify harness or evidence-collection faults separately from failures of the system under test; record their costs and effects on validity rather than silently discarding them.
 
 ## 5. Execute the experiment
 
-Follow the agreed scope and freeze the protocol, configuration, and intervention before evaluation. Preserve the records needed to inspect outcomes: results, traces, timing, usage, costs, and relevant version identifiers. Keep original predictions and record amendments, incomplete work, and deviations.
+Follow the agreed scope and freeze the protocol, configuration, and intervention before evaluation. Preserve the records needed to inspect outcomes: results, traces, timing, usage, costs, and relevant version identifiers. Keep original predictions and record amendments, incomplete work, and deviations. Plan evidence retention by purpose: what remains hosted, what must be exported, identifiers and access or retention limits, and when collection happens. Export only what the agreed analysis or reproducibility needs; do not download hosted traces by habit or assume they remain accessible indefinitely. Record missing evidence and its impact on the claims.
 
 Do not silently add candidates, change criteria, exclude observations, or repeat runs until successful. Follow the agreed stopping and retry rules. Seek a new decision when continuation would exceed the authorized scope.
 
@@ -45,13 +45,13 @@ Do not silently add candidates, change criteria, exclude observations, or repeat
 
 Evaluate outcomes against predictions, baseline results, and predefined criteria. Report individual-case patterns, aggregates, denominators, and unsuccessful-work costs. Separate comparison execution cost from development or proposal overhead, and estimated usage costs from confirmed charges. Consider caching and other conditions affecting comparability.
 
-Keep measurements separate from explanations and adoption decisions. Do not pool incompatible workloads or combine percentage gains from different cohorts into a measured cumulative saving.
+Measure both the targeted mechanism and the end-to-end outcome: fewer operations do not establish lower cost or latency. Summed step durations can overlap and need not equal wall-clock time; do not subtract them to claim a speed gain. Keep measurements separate from explanations and adoption decisions. Do not pool incompatible workloads or combine percentage gains from different cohorts into a measured cumulative saving.
 
 ## 7. Interpret the findings
 
 Assess hypothesis support, alternative explanations, measurement validity, uncertainty, and transfer to other conditions. Distinguish independent starting state, new data values, and new task families. Better measured performance does not by itself explain its cause. A missed continuation target does not erase an observed benefit, and a small passing evaluation does not establish broad reliability.
 
-State what remains untested and what fresh evaluation a revised claim would require. Distinguish actual practice from recommendations.
+State what remains untested and what fresh evaluation a revised claim would require. Assess functional or feasibility gains separately from efficiency gains. A workflow can meet a new requirement without becoming faster or cheaper; a mixed result can still inform a useful next decision. Distinguish actual practice from recommendations.
 
 ## 8. Conclude and determine next steps
 

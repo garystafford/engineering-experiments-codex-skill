@@ -7,6 +7,7 @@
 - Hypothesis disposition: retained / revised / rejected / unresolved
 - Findings supporting the conclusion and remaining uncertainty:
 - Acceptance criteria met or missed; distinguish measured effects from thresholds:
+- Targeted mechanism, functional requirements, and overall efficiency: which improved, stayed unchanged, or remain unresolved?
 - Next action: continue / redesign / investigate an alternative / larger study / stop
 - Rationale; distinguish predeclared rules from judgment after reviewing results:
 

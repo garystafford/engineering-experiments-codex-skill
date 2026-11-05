@@ -24,6 +24,9 @@ Distinguish requirements and constraints from proposals and assumptions. Selecti
 ## 3. Specify the protocol
 
 - Metrics, success definition, and grading:
+- Targeted mechanism and end-to-end outcomes, assessed separately:
+- Timing start/stop events, warm-up treatment, and relevant phase boundaries:
+- Counting units and sources (for example, generations, business-tool calls, approvals, controller requests):
 - Acceptance, continuation, and stopping criteria; rationale:
 - Cases and selection rationale; development/holdout separation if applicable:
 - Repetitions and rationale; uncertainty the design can address:
@@ -33,12 +36,14 @@ Distinguish requirements and constraints from proposals and assumptions. Selecti
 - Spending authorization already granted or still needed:
 - Budget enforcement and what it bounds:
 - Treatment of incomplete work and agreed retry rules:
-- Artifacts to freeze and retain:
+- Artifacts to freeze and retain; purpose, hosted/local location, identifiers, access/retention limits, and collection timing:
 - Claims the design could support and known validity limitations:
 
 ## 4. Validate the experimental setup
 
 - Planned component and workflow checks:
+- Harness checks: completion/failure detection, timing, missing/delayed evidence, and recovery without duplicate actions where relevant:
+- Classification and accounting for system, harness, and evidence-collection failures:
 - Known correct and incorrect grading cases:
 - Task feasibility, test data, and starting-state checks:
 - Checks actually completed, results, and remaining limitations:

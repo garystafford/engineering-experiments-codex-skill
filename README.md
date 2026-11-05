@@ -2,9 +2,9 @@
 
 A Codex skill for designing, running, and reviewing controlled engineering experiments. It connects a testable hypothesis to an engineering decision through eight steps: hypothesis, design, protocol, setup validation, execution, analysis, interpretation, and conclusion.
 
-Use it to compare implementations, evaluate performance or cost changes, investigate agent behavior, or review existing experimental results. It emphasizes credible baselines, predefined criteria, resource limits, retained evidence, and conclusions bounded by what was tested.
+Use it to compare implementations, evaluate performance or cost changes, investigate agent behavior, or review existing experimental results. It emphasizes credible baselines, predefined criteria, resource limits, retained evidence, and conclusions bounded by what was tested. Timing boundaries, harness validation, precise call counts, and separate mechanism and outcome measures help prevent misleading efficiency claims.
 
-For more details on the framework, read [From Hypothesis to Understanding: A Practical Framework for Engineering Experiments](https://blog.latentthoughts.com/from-hypothesis-to-understanding-a-practical-framework-for-engineering-experiments).
+For more details on the framework, read [From Hypothesis to Understanding: A Practical Framework for Applied AI Engineering Experiments](https://blog.latentthoughts.com/from-hypothesis-to-understanding-a-practical-framework-for-engineering-experiments).
 
 ## Install
 
@@ -51,5 +51,6 @@ The skill can start in design, execution, or review mode. It reuses existing art
 - [Results summary template](skills/engineering-experiments/assets/results-summary.md)
 - [Decision record template](skills/engineering-experiments/assets/decision-record.md)
 - [Illustrative response-cache example](skills/engineering-experiments/references/worked-example.md)
+- [Measured mixed-result example](skills/engineering-experiments/references/mixed-result-example.md)
 
-This is an instruction-only skill; it includes no executable scripts and requires no additional packages to install. Running a particular experiment may require its own tools or services. The worked example contains sample results, not measured evidence.
+This is an instruction-only skill; it includes no executable scripts and requires no additional packages to install. Running a particular experiment may require its own tools or services. The response-cache example contains illustrative sample results. The mixed-result example summarizes a measured pilot with paired observations and source provenance; neither example supplies default settings or evidence for another workload.
